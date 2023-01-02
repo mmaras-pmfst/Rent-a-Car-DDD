@@ -23,10 +23,12 @@ using RentaCar.Application.Authentication.Commands.Register;
 using RentaCar.Application.Authentication.Common;
 using RentaCar.Application.Authentication.Queries.Login;
 using MapsterMapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RentaCar.Api.Controllers
 {
     [Route("auth")]
+    [AllowAnonymous]
     public class AuthenticationController : ApiController
     {
         private readonly ISender _mediator;

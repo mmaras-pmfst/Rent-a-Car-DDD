@@ -21,7 +21,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace RentaCar.Api.Controllers
 {
     [Route("[controller]")]
-    [Authorize]
     public class RentsController : ApiController
     {
         [HttpGet]

@@ -15,6 +15,7 @@
 ** Authorization: required Yes
 **********************/
 using ErrorOr;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
@@ -23,6 +24,8 @@ using RentaCar.Api.Common.Http;
 namespace RentaCar.Api.Controllers
 {
     [ApiController]
+    [Authorize]
+
     public class ApiController : ControllerBase
     {
         protected IActionResult Problem(List<Error> errors)
