@@ -14,7 +14,7 @@
 ** Cache: 60 seconds
 ** Authorization: required Yes
 **********************/
-using RentaCar.Domain.Entities;
+using RentaCar.Domain.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;

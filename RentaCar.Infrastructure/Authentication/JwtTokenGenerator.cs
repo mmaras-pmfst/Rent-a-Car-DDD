@@ -18,7 +18,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using RentaCar.Application.Commons.Interfaces.Authentication;
 using RentaCar.Application.Commons.Interfaces.Services;
-using RentaCar.Domain.Entities;
+using RentaCar.Domain.User;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;

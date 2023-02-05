@@ -15,7 +15,7 @@
 ** Authorization: required Yes
 **********************/
 using RentaCar.Application.Commons.Interfaces.Persistence;
-using RentaCar.Domain.Entities;
+using RentaCar.Domain.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -19,7 +19,7 @@ using MediatR;
 using RentaCar.Application.Commons.Interfaces.Authentication;
 using RentaCar.Application.Commons.Interfaces.Persistence;
 using RentaCar.Application.Authentication.Common;
-using RentaCar.Domain.Entities;
+using RentaCar.Domain.User;
 using RentaCar.Domain.Common.Errors;
 
 using System;
