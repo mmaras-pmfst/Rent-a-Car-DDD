@@ -10,7 +10,7 @@ namespace RentaCar.Domain.Color
 {
     public sealed class Color : AggregateRoot<ColorId>
     {
-        public string Name { get; }
+        public string Name { get; private set; }
         public Color(ColorId colorId, string name)
             :base(colorId)
         {

@@ -10,7 +10,7 @@ namespace RentaCar.Domain.Fuel
 {
     public sealed class Fuel : AggregateRoot<FuelId>
     {
-        public string Name { get; }
+        public string Name { get; private set; }
 
         public Fuel(FuelId fuelId,string name)
             : base(fuelId)

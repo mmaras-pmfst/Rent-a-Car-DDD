@@ -9,7 +9,7 @@ namespace RentaCar.Domain.Car.ValueObjects
 {
     public sealed class CarId : ValueObject
     {
-        public Guid Value { get; }
+        public Guid Value { get; private set; }
         public CarId(Guid value)
         {
             Value = value;

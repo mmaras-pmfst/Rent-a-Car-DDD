@@ -11,9 +11,9 @@ namespace RentaCar.Domain.CarBrand.Entities
 {
     public sealed class CarModel : Entity<CarModelId>
     {
-        public string Name { get; }
-        public CarBrandId CarBrandId { get; }
-        public CarCategoryId CarCategoryId { get; }
+        public string Name { get; private set; }
+        public CarBrandId CarBrandId { get; private set; }
+        public CarCategoryId CarCategoryId { get; private set; }
 
         public CarModel(CarModelId id, string name, CarBrandId carBrandId, CarCategoryId carCategoryId) : base(id)
         {

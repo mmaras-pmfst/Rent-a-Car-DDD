@@ -31,5 +31,7 @@ namespace RentaCar.Domain.User
         public string? Password { get; set; }
 
         
+
+        
     }
 }

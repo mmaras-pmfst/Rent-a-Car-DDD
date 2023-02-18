@@ -10,8 +10,8 @@ namespace RentaCar.Domain.CarCategory
 {
     public sealed class CarCategory : AggregateRoot<CarCategoryId>
     {
-        public string Name { get; }
-        public string Description { get; }
+        public string Name { get; private set; }
+        public string Description { get; private set; }
         public CarCategory(CarCategoryId carCategoryId, string name, string description)
             : base(carCategoryId)
         {

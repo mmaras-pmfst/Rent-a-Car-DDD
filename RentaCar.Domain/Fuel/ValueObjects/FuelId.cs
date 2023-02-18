@@ -9,7 +9,7 @@ namespace RentaCar.Domain.Fuel.ValueObjects
 {
     public sealed class FuelId : ValueObject
     {
-        public Guid Value { get; }
+        public Guid Value { get; private set; }
         public FuelId(Guid value)
         {
             Value = value;
