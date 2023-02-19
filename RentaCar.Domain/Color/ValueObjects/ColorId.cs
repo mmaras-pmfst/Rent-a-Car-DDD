@@ -20,6 +20,11 @@ namespace RentaCar.Domain.Color.ValueObjects
             return new(Guid.NewGuid());
         }
 
+        public static ColorId Create(Guid value)
+        {
+            return new ColorId(value);
+        }
+
         public override IEnumerable<object> GetEqualityComponent()
         {
             yield return Value;

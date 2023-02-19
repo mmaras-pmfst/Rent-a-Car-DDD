@@ -14,5 +14,12 @@ namespace RentaCar.Domain.Common.Models
         {
 
         }
+
+#pragma warning disable CS8618
+        protected AggregateRoot()
+        {
+        }
+#pragma warning restore CS8618
+
     }
 }

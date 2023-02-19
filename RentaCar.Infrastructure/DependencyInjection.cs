@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
+using RentaCar.Infrastructure.Persistence.Repositories;
 
 namespace RentaCar.Infrastructure;
 
@@ -20,9 +22,18 @@ public static class DependencyInjection
         services.AddAuth(configuration);
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 
-        services.AddScoped<IUserRepository, UserRepository>();
         return services;
 
+    }
+
+    public static IServiceCollection AddPersistance(this IServiceCollection services)
+    {
+        services.AddScoped<IUserRepository, UserRepository>();
+
+        services.AddDbContext<RentaCarDbContext>(options =>
+            options.UseSqlServer("Server=(LocalDb)\\MSSQLLocalDB;Database=RentaCarTest1;Trusted_Connection=True;"));
+
+        return services;
     }
 
     public static IServiceCollection AddAuth(this IServiceCollection services, ConfigurationManager configuration)

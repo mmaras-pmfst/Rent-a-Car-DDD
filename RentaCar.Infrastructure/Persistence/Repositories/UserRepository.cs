@@ -22,14 +22,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RentaCar.Infrastructure.Persistence
+namespace RentaCar.Infrastructure.Persistence.Repositories
 {
     public class UserRepository : IUserRepository
     {
+        private readonly RentaCarDbContext _dbContext;
+
         private static readonly List<User> _users = new List<User>();
+
+        public UserRepository(RentaCarDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
         public void AddUser(User user)
         {
             _users.Add(user);
+            _dbContext.Add(user);
+            _dbContext.SaveChanges();
         }
 
         public User? GetUserByEmail(string email)

@@ -9,7 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services
     .AddPresentation()
     .AddApplication()
-    .AddInfrastructure(builder.Configuration);
+    .AddInfrastructure(builder.Configuration)
+    .AddPersistance();
 
 //builder.Services.AddControllers(options => options.Filters.Add<ErrorHandlingFilterAttribute>()); // FILTER ERROR HANDLING
 
